@@ -1,0 +1,24 @@
+// to see the list of certs on system
+step 5:
+D:\>keytool -list -keystore "C:\Program Files\Java\jdk1.6.0_20\jre\lib\security\
+cacerts"
+step 4:
+
+//to create jks file in local(importing certficate)
+D:\> keytool -importcert -alias root -file D:\root.cer -keystore truststore1.jks
+ -storepass test1234
+step:3
+
+//importing certficate into keytool
+D:\>keytool -import -alias root -keystore "C:\Program Files\Java\jdk1.6.0_20\jre
+\lib\security\cacerts" -file D:\root.cer
+
+step:2
+
+//to print certificate
+D:\>keytool -printcert -file D:\my2.cer
+
+
+step1:
+
+//process to certificate from chrome tools -> options -> underbonnet -> Managecertificate -> intermediate certification authorites ->(select one)Godaddy -> export -> base64 encodeed x.509 ->name and browse to save->finish
